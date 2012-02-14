@@ -1,0 +1,44 @@
+This file is part of the perltwit command line application.
+
+Copyright Trenton D. Adams <perltwit at trentonadams daught ca>
+
+perltwit is free software: you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+perltwit is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+License for more details.
+
+You should have received a copy of the GNU Lesser General Public 
+License along with perltwit.  If not, see <http://www.gnu.org/licenses/>.
+
+See the COPYING file for more information.
+
+
+
+perltwit is very simple.  Copy the "twitter" script to /usr/local/bin, and
+ensure the required perl libraries are installed on your machine.  If
+desired, you may use cpan to install them, or at your option a package
+manager for the Linux distribution you are using may also be used; if it
+provides the required packages.
+
+Once install into your PATH in some form or another, and upon first run,
+the application will ask you for a consumer key and consumer secret.
+Basically, this means you must go to twitter and register an application
+there, as a developer.  You can find the apps section under "Settings".  
+Call it whatever you like.  You should keep this consumer key and key
+secret..., well..., SECRET. :D
+
+The next thing that you will be asked for, is an authentication key for the
+user that you'd like to use for tweeting.  This is stored in a special file
+under ~/.twitter/twitter-${user}.conf, where ${user} is replaced with the
+user specified to the -f parameter.
+
+If you ran...
+twitter -f twitteruser -m 'How many tweets can a twit tweet if a twit could tweet tweets?'
+You'd have a config in ~/.twitter/twitter-twitteruser.conf that stores a
+special authentication key for that user.  You'll never be asked for a
+password, or authentication of any form ever again.
