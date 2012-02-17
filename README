@@ -17,7 +17,8 @@ License along with perltwit.  If not, see <http://www.gnu.org/licenses/>.
 
 See the COPYING file for more information.
 
-
+perltwit is a command line application written in perl.  It supports
+sending tweets as any number of users using OAuth.
 
 perltwit is very simple.  Copy the "twitter" script to /usr/local/bin, and
 ensure the required perl libraries are installed on your machine.  If
