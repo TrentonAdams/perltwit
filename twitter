@@ -103,7 +103,7 @@ if (!$consumer_key || !$consumer_key_secret) {
 }
 
 my $nt = Net::Twitter->new(
-                traits   => ['API::REST', 'OAuth'],
+                traits   => [qw/API::RESTv1_1/, 'OAuth'],
                 consumer_key => $consumer_key,
                 consumer_secret => $consumer_key_secret
                 );
