@@ -105,7 +105,8 @@ if (!$consumer_key || !$consumer_key_secret) {
 my $nt = Net::Twitter->new(
                 traits   => [qw/API::RESTv1_1/, 'OAuth'],
                 consumer_key => $consumer_key,
-                consumer_secret => $consumer_key_secret
+                consumer_secret => $consumer_key_secret,
+                ssl => 1
                 );
 
 # You'll save the token and secret in cookie, config file or session database
@@ -132,7 +133,7 @@ my $result;
 if (defined $to)
 {
   print "Direct to $to: $message\n";
-  $result = $nt->new_direct_message($to, $message);
+  $result = $nt->new_direct_message($message, {screen_name => $to});
 }
 else
 { 
